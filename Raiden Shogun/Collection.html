@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reign of Serenity - Collection 2025</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+      <header class="container-header">
+      <a href="index.html" class="lien-logo">
+      <img src="Images/Raiden-ROS-Logo.png" alt="Logo Reign Of Serenity" />
+      </a>
+      <div class="menu">
+      <a href="Index.html">Home</a> |
+      <a href="Collection.html" target="_blank">Collection</a> |
+      <a href="Gallery.html" target="_blank">Gallery</a> |
+      <a href="https://www.facebook.com/aubesilencieuse/" target="_blank">About</a>
+      </div>
+      </header>
+    </nav>
+
+<!--Hero Header-->
+  <section class="hero">
+      <img src="Images/Raiden-banner-collection.png" alt="Raiden Shogun Hero">
+  </section>
+
+  <main class="container">  
+    <section class="Selecteur">
+        <div>
+            <p class="Selecteur-collection">Collection <b><em>2025 <br/>
+            Raiden</em></b> Shogun</p>
+        </div>
+
+        <div class="product-filter">
+            <button class="filter-btn active" data-type="all">All</button>
+            <button class="filter-btn" data-type="tshirt">T-shirt</button>
+            <button class="filter-btn" data-type="short">Short</button>
+            <button class="filter-btn" data-type="other">Others</button>
+        </div>
+    </section>
+
+    <section class="Collection">
+        <div class="Items" data-type="tshirt">
+            <img src="Images/raiden-top-1.png" alt="Raiden T-shirt" />
+            <h3>Raiden Shogun Impression T-Shirt | 31 €</h3>
+        </div>
+
+        <div class="Items" data-type="tshirt">
+            <img src="Images/Raiden-Top-2.png" alt="Raiden T-shirt" />
+            <h3>Raiden Shogun Impression T-Shirt | 31 €</h3>
+        </div>
+
+        <div class="Items" data-type="tshirt">
+            <img src="Images/Raiden-Top-3.png" alt="Raiden T-shirt" />
+            <h3>Raiden Shogun Impression T-Shirt | 31 €</h3>
+        </div>
+
+        <div class="Items" data-type="tshirt">
+            <img src="Images/Raiden-Top-4.png" alt="Raiden T-shirt" />
+            <h3>Raiden Shogun Impression T-Shirt | 31 €</h3>
+        </div>
+
+        <div class="Items" data-type="other">
+            <img src="Images/Tote-bag.png" alt="Raiden Tote Bag" />
+            <h3>Raiden Shogun Impression Canvas Tote Bag | 23 €</h3>
+        </div>
+
+        <div class="Items" data-type="short">
+            <img src="Images/Raiden-Short.png" alt="Raiden Short" />
+            <h3>Raiden Shogun Impression Shorts | 42 €</h3>
+        </div>
+
+        <div class="Items" data-type="other">
+            <img src="Images/Raiden-Bracelet.png" alt="Raiden Bracelet" />
+            <h3>Raiden Shogun Theme Impression Style Bracelet | 10 €</h3>
+        </div>
+
+        <div class="Items" data-type="other">
+            <img src="Images/Raiden-Box.png" alt="Raiden Box" />
+            <h3>"Reign of Serenity" Raiden Shogun Charging Kit Gift Box | 72 €</h3>
+        </div>
+    </section>
+  </main>
+
+  <script>
+const buttons = document.querySelectorAll('.filter-btn');
+const products = document.querySelectorAll('.Items');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    const type = button.getAttribute('data-type');
+
+    products.forEach(product => {
+      if(type === 'all' || product.getAttribute('data-type') === type) {
+        product.style.display = 'block';
+      } else {
+        product.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+
+<div class="spacer"></div>
+</body>
+</html> 
